@@ -11,50 +11,60 @@
             <h1>Vital signs intake forms</h1>
             <p>This forms will help the doctors be faster with you consult</p>
         </header>
-        <form id="patient-info" action="/submit" method="POST">
-            <label for="fullname">Full name: </label>
-            <input id="fullname" type="text" required="true" placeholder="Ex. Juan Perez" name="Full Name">
+        <section id="form-card">
+            <form id="patient-info" action="/submit" method="POST">
+                <label for="fullname">Full name: </label>
+                <input id="fullname" type="text" required="true" placeholder="Ex. Juan Perez" name="Full Name">
 
-            <label for="email">E-mail: </label>
-            <input id="email" type="email" required="true" placeholder="Ex. example.email@domain.com" name="E-mail">
+                <label for="email">E-mail: </label>
+                <input id="email" type="email" required="true" placeholder="Ex. example.email@domain.com" name="E-mail">
 
-            <label for="password">Password: </label>
-            <input id="password" type="password" minlength="8" required="true" placeholder="Ex. password1234" name="Password">
+                <label for="password">Password: </label>
+                <input id="password" type="password" minlength="8" required="true" placeholder="Ex. password1234" name="Password">
 
-            <label for="birthdate">Date of Birth: </label>
-            <input id="birthdate" type="date" required="true" placeholder="Ex. 08/07/2020" name="Date of Birth">
-            <label for="height">Height: </label>
-            <input id="height" type="number" min="30" max="250" required="true" placeholder="Ex. 180" name="Height">
+                <label for="birthdate">Date of Birth: </label>
+                <input id="birthdate" type="date" required="true" placeholder="Ex. 08/07/2020" name="Date of Birth">
+                <label for="height">Height: </label>
+                <input id="height" type="number" min="30" max="250" required="true" placeholder="Ex. 180" name="Height">
 
-            <input id="male" type="radio" required="false" name="gender" value="Male">
-            <label for="male">Male</label>
-
-            <input id="female" type="radio" required="false" name="gender" value="Female">
-            <label for="female">Female</label>
-
-            <input id="other" type="radio" required="false" name="gender" value="Other">
-            <label for="other">Other</label>
-
-            <label for="bloodtype">Blood type:</label>
-            <select id="bloodtype" name="bloodtype" required="true">
-                <option value="" disabled selected>Select your blood type</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B+</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-            </select>
-
-            <label for="medicalhistory">Medical History: </label>
-            <textarea id="medicalhistory" name="medicalhistory" placeholder="Ex. allergies, chronics conditions"></textarea>
-
-            <input id="consent" type="checkbox" name="consent" required>
-            <label for="consent">I accept terms and conditions</label>
-
-            <button type="submit">Submit</button>
-        </form>
+                <div id="genders">
+                    <p>Gender: </p>
+                    <input id="male" type="radio" required="false" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input id="female" type="radio" required="false" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    <input id="other" type="radio" required="false" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+                
+                <div id="select-bloodtype">
+                    <label for="bloodtype">Blood type:</label>
+                    <select id="bloodtype" name="bloodtype" required="true">
+                        <option value="" disabled selected>Select your blood type</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                
+                <div id="area-medicalhistory">
+                    <label for="medicalhistory">Medical History: </label>
+                    <textarea id="medicalhistory" name="medicalhistory" placeholder="Ex. allergies, chronics conditions"></textarea>
+                </div>
+                
+                <div id="confirm-consent">
+                    <input id="consent" type="checkbox" name="consent" required>
+                    <label for="consent">I accept terms and conditions</label>
+                </div>
+                    
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
     </body>
 </html>
